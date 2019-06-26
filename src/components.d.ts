@@ -9,7 +9,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface Button {
+  interface DwcButton {
     'disabled': boolean;
     'text': string;
   }
@@ -18,24 +18,24 @@ export namespace Components {
 declare global {
 
 
-  interface HTMLDwcButtonElement extends Components.Button, HTMLStencilElement {}
-  var HTMLButtonElement: {
-    prototype: HTMLButtonElement;
-    new (): HTMLButtonElement;
+  interface HTMLDwcButtonElement extends Components.DwcButton, HTMLStencilElement {}
+  var HTMLDwcButtonElement: {
+    prototype: HTMLDwcButtonElement;
+    new (): HTMLDwcButtonElement;
   };
   interface HTMLElementTagNameMap {
-    'dwc-button': HTMLButtonElement;
+    'dwc-button': HTMLDwcButtonElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface Button extends JSXBase.HTMLAttributes<HTMLButtonElement> {
+  interface DwcButton extends JSXBase.HTMLAttributes<HTMLDwcButtonElement> {
     'disabled'?: boolean;
     'text'?: string;
   }
 
   interface IntrinsicElements {
-    'button': Button;
+    'dwc-button': DwcButton;
   }
 }
 

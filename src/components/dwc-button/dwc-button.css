@@ -6,6 +6,7 @@
   cursor: pointer;
   font-size: var(--dwc-font-medium);
   height: 36px;
+  margin: 5px;
   min-width: 64px;
   outline: none;
   padding: 0 16px;

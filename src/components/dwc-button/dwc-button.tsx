@@ -21,7 +21,9 @@ export class Button {
   }
   @Listen('click', { capture: true })
   handleClick(event) {
-    console.log('click', event);
+    if (!this.disabled) {
+      console.log(event);
+    }
   }
   // Render HTML
   render() {
