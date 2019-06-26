@@ -1,5 +1,5 @@
 {
-  "name": "monomoer",
+  "name": "monomer",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
@@ -26,5 +26,14 @@
   "license": "MIT",
   "dependencies": {
     "@types/jest": "^24.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dougcpr/monomer.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/dougcpr/monomer/issues"
+  },
+  "homepage": "https://github.com/dougcpr/monomer#readme"
 }
