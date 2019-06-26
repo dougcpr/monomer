@@ -1,0 +1,26 @@
+.dwc-button {
+  background-color: var(--dwc-green);
+  border: none;
+  border-radius: 4px;
+  color: var(--dwc-black);
+  cursor: pointer;
+  font-size: var(--dwc-font-medium);
+  height: 36px;
+  min-width: 64px;
+  outline: none;
+  padding: 0 16px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.dwc-button:disabled {
+  background-color: var(--dwc-button-disabled-bg);
+  border-bottom-color: var( --dwc-button-disabled);
+  color: var( --dwc-button-disabled);
+  pointer-events: none;
+}
+.dwc-button:hover {
+  filter: brightness(105%);
+}
+.dwc-button:active {
+  filter: brightness(95%);
+}
