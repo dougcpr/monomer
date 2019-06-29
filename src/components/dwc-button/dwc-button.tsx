@@ -11,11 +11,12 @@ import { Component, h, Prop } from '@stencil/core';
 export class Button {
   // Props
   @Prop() disabled: boolean;
+  @Prop() outline: boolean;
   // Render HTML
   render() {
     return (
       <button
-        class="dwc-button"
+        class={{'outline': this.outline}}
         disabled={this.disabled}
       >
         <slot/>
