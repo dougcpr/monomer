@@ -13,6 +13,7 @@ export namespace Components {
     'disabled': boolean;
     'outline': boolean;
   }
+  interface DwcLoader {}
 }
 
 declare global {
@@ -23,8 +24,15 @@ declare global {
     prototype: HTMLDwcButtonElement;
     new (): HTMLDwcButtonElement;
   };
+
+  interface HTMLDwcLoaderElement extends Components.DwcLoader, HTMLStencilElement {}
+  var HTMLDwcLoaderElement: {
+    prototype: HTMLDwcLoaderElement;
+    new (): HTMLDwcLoaderElement;
+  };
   interface HTMLElementTagNameMap {
     'dwc-button': HTMLDwcButtonElement;
+    'dwc-loader': HTMLDwcLoaderElement;
   }
 }
 
@@ -33,9 +41,11 @@ declare namespace LocalJSX {
     'disabled'?: boolean;
     'outline'?: boolean;
   }
+  interface DwcLoader extends JSXBase.HTMLAttributes<HTMLDwcLoaderElement> {}
 
   interface IntrinsicElements {
     'dwc-button': DwcButton;
+    'dwc-loader': DwcLoader;
   }
 }
 

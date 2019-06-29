@@ -5,7 +5,7 @@ button {
   color: var(--dwc-black);
   cursor: pointer;
   font-size: var(--dwc-font-medium);
-  height: 36px;
+  height: var(--dwc-button-height);
   margin: 5px;
   min-width: 64px;
   outline: none;
@@ -20,7 +20,7 @@ button.outline:not(:disabled) {
 }
 button.outline:not(:disabled):hover {
   background-color: var(--dwc-green);
-  color: white;
+  color: var( --dwc-white);
 }
 button:disabled {
   background-color: var(--dwc-button-disabled-bg);

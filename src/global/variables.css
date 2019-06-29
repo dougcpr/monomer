@@ -1,7 +1,10 @@
 :root {
-  --dwc-font-medium: 14px;
-  --dwc-green: #50bc91;
   --dwc-black: #000;
   --dwc-button-disabled: rgba(0, 0, 0, 0.26);
   --dwc-button-disabled-bg: rgba(0, 0, 0, 0.12);
+  --dwc-button-height: 36px;
+  --dwc-green: #50bc91;
+  --dwc-white: #fff;
+  --dwc-font-medium: 14px;
+
 }
