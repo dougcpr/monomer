@@ -10,7 +10,6 @@
 | Property   | Attribute  | Description | Type      | Default     |
 | ---------- | ---------- | ----------- | --------- | ----------- |
 | `disabled` | `disabled` |             | `boolean` | `undefined` |
-| `text`     | `text`     |             | `string`  | `undefined` |
 
 
 ----------------------------------------------
