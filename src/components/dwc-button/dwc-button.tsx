@@ -3,7 +3,7 @@ import { Component, h, Prop } from '@stencil/core';
 @Component({
   tag: 'dwc-button',
   // styles
-  styleUrl: 'dwc-button.css',
+  styleUrl: 'dwc-button.scss',
   // native shadow-dom encapsulation (scoped styles to the web platform)
   shadow: true
 })

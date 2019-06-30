@@ -3,7 +3,7 @@ import { Component, h } from '@stencil/core';
 @Component({
   tag: 'dwc-loader',
   // styles
-  styleUrl: 'dwc-loader.css',
+  styleUrl: 'dwc-loader.scss',
   // native shadow-dom encapsulation (scoped styles to the web platform)
   shadow: true
 })

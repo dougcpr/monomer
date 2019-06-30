@@ -13,6 +13,10 @@ export namespace Components {
     'disabled': boolean;
     'outline': boolean;
   }
+  interface DwcInput {
+    'disabled': boolean;
+    'label': string;
+  }
   interface DwcLoader {}
 }
 
@@ -25,6 +29,12 @@ declare global {
     new (): HTMLDwcButtonElement;
   };
 
+  interface HTMLDwcInputElement extends Components.DwcInput, HTMLStencilElement {}
+  var HTMLDwcInputElement: {
+    prototype: HTMLDwcInputElement;
+    new (): HTMLDwcInputElement;
+  };
+
   interface HTMLDwcLoaderElement extends Components.DwcLoader, HTMLStencilElement {}
   var HTMLDwcLoaderElement: {
     prototype: HTMLDwcLoaderElement;
@@ -32,6 +42,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'dwc-button': HTMLDwcButtonElement;
+    'dwc-input': HTMLDwcInputElement;
     'dwc-loader': HTMLDwcLoaderElement;
   }
 }
@@ -41,10 +52,15 @@ declare namespace LocalJSX {
     'disabled'?: boolean;
     'outline'?: boolean;
   }
+  interface DwcInput extends JSXBase.HTMLAttributes<HTMLDwcInputElement> {
+    'disabled'?: boolean;
+    'label'?: string;
+  }
   interface DwcLoader extends JSXBase.HTMLAttributes<HTMLDwcLoaderElement> {}
 
   interface IntrinsicElements {
     'dwc-button': DwcButton;
+    'dwc-input': DwcInput;
     'dwc-loader': DwcLoader;
   }
 }
