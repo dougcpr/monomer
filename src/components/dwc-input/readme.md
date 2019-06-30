@@ -11,6 +11,7 @@
 | ---------- | ---------- | ----------- | --------- | ----------- |
 | `disabled` | `disabled` |             | `boolean` | `undefined` |
 | `label`    | `label`    |             | `string`  | `undefined` |
+| `type`     | `type`     |             | `string`  | `undefined` |
 
 
 ----------------------------------------------

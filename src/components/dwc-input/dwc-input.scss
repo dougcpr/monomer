@@ -1,6 +1,8 @@
 .text-field {
-  min-width: 100px;
+  height: 64px;
   max-width: 200px;
+  min-width: 100px;
+  padding: 5px;
 }
 input {
   border: 1px solid var(--dwc-input-border);
@@ -9,11 +11,15 @@ input {
   margin: 5px;
   outline: none;
   padding: 12px 16px 14px;
-  width: 100%;
 }
 
-input:disabled, label {
+input:disabled {
   background-color: #f5f5f5;
+  pointer-events: none;
+}
+
+input:disabled + label {
+  background-color: transparent;
   pointer-events: none;
 }
 
@@ -34,6 +40,7 @@ label {
 input:focus:not(:disabled) {
   border: 1px solid var(--dwc-green);
   transition: 0.2s both;
+  position: relative;
 }
 
 input:hover:not(:focus):not(:disabled) {
