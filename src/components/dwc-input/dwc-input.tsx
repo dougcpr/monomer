@@ -10,8 +10,7 @@ export class Input {
   @Prop() disabled: boolean;
   @Prop() label: string;
   static detectContent(ev) {
-    console.log(ev);
-    // ev.path[0].value ? ev.path[0].classList.add('label-stick') : ev.path[0].classList.remove('label-stick');
+    ev.path[0].value ? ev.path[0].classList.add('content-filled') : ev.path[0].classList.remove('content-filled');
   }
   render() {
     return (

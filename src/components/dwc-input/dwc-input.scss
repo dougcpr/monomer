@@ -3,7 +3,7 @@
   max-width: 200px;
 }
 input {
-  border: 2px solid var(--dwc-input-border);
+  border: 1px solid var(--dwc-input-border);
   border-radius: 3px;
   font-size: 1rem;
   margin: 5px;
@@ -24,6 +24,7 @@ input::placeholder, label {
 label {
   background-color: white;
   bottom: 38px;
+  color: var(--dwc-input-border);
   left: 18px;
   letter-spacing: 0.009375em;
   position: relative;
@@ -31,12 +32,12 @@ label {
 }
 
 input:focus:not(:disabled) {
-  border: 2px solid var(--dwc-green);
+  border: 1px solid var(--dwc-green);
   transition: 0.2s both;
 }
 
 input:hover:not(:focus):not(:disabled) {
-  border: 2px solid var(--dwc-input-border-hover);
+  border: 1px solid var(--dwc-input-border-hover);
   transition: 0.2s;
 }
 
@@ -52,19 +53,17 @@ input:focus:not(:disabled):empty + label {
   position: relative;
  }
 
-input:hover:not(:focus):not(:disabled) + label {
-  color: var(--dwc-input-border-hover);
-  transition: 0.2s;
-}
-
-.label-stick {
+.content-filled + label {
   background-color: white;
   bottom: 63px;
-  color: var(--dwc-green);
+  color: var(--dwc-input-border);
   font-size: 11px;
   left: 10px;
   margin: 5px;
-  transition: 0.2s;
   padding: 0 5px;
   position: relative;
+}
+
+.content-filled {
+  border: 1px solid var(--dwc-input-border);
 }
