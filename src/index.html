@@ -34,9 +34,20 @@
     <div style="color: var(--dwc-default)">Log In</div>
     <dwc-input label="Username"></dwc-input>
     <dwc-input label="Password" type="password" ></dwc-input>
-    <dwc-button>Submit</dwc-button>
+    <dwc-button onClick="submitted(event)">Submit</dwc-button>
   </dwc-card>
 </div>
 
 </body>
 </html>
+<script>
+  // example function to render loader after clicking submit button
+  function submitted(ev) {
+    let text = ev.toElement.innerHTML ;
+    ev.toElement.innerHTML = `<dwc-loader></dwc-loader>`
+    setTimeout(() => {
+      ev.toElement.innerHTML = text;
+    }, 2000);
+
+  }
+</script>
