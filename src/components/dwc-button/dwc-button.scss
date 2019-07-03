@@ -5,6 +5,7 @@ button {
   color: var(--dwc-white);
   cursor: pointer;
   font-size: var(--dwc-font-medium);
+  font-weight: 500;
   height: var(--dwc-button-height);
   margin: 5px;
   min-width: 100px;
@@ -12,6 +13,7 @@ button {
   padding: 0 16px;
   text-align: center;
   text-transform: capitalize;
+  width: 100%;
 }
 button.outline:not(:disabled) {
   background-color: transparent;

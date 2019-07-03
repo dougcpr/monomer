@@ -4,10 +4,13 @@ div.card {
   color: var(--dwc-default);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 0;
+  min-height: 300px;
   min-width: 100px;
   padding: 12px 16px 12px 14px;
   width: max-content;
+  justify-content: space-around;
+  .subject {
+    text-align: center;
+  }
 }
