@@ -7,10 +7,10 @@ import { Component, h, Prop } from '@stencil/core';
 })
 
 export class Card {
-  @Prop() title: string;
+  @Prop() subject: string;
   render() {
     return <div class="card">
-      <div>{this.title}</div>
+      <div>{this.subject}</div>
       <slot
       />
     </div>
