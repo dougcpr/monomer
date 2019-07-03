@@ -34,7 +34,7 @@
     <div style="color: var(--dwc-default)">Log In</div>
     <dwc-input label="Username"></dwc-input>
     <dwc-input label="Password" type="password" ></dwc-input>
-    <dwc-button onClick="submitted(event)">Submit</dwc-button>
+    <dwc-button onClick="submitted(e)">Submit</dwc-button>
   </dwc-card>
 </div>
 
@@ -43,11 +43,10 @@
 <script>
   // example function to render loader after clicking submit button
   function submitted(ev) {
-    let text = ev.toElement.innerHTML ;
-    ev.toElement.innerHTML = `<dwc-loader></dwc-loader>`
+    let text = ev.target.innerHTML ;
+    ev.target.innerHTML = `<dwc-loader></dwc-loader>`
     setTimeout(() => {
-      ev.toElement.innerHTML = text;
+      ev.target.innerHTML = text;
     }, 2000);
-
   }
 </script>
