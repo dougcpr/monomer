@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'dwc-card',
@@ -7,7 +7,12 @@ import { Component, h } from '@stencil/core';
 })
 
 export class Card {
+  @Prop() title: string;
   render() {
-    return <div class="card"><slot /></div>
+    return <div class="card">
+      <div>{this.title}</div>
+      <slot
+      />
+    </div>
   }
 }

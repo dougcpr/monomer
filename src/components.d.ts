@@ -13,7 +13,9 @@ export namespace Components {
     'disabled': boolean;
     'outline': boolean;
   }
-  interface DwcCard {}
+  interface DwcCard {
+    'title': string;
+  }
   interface DwcInput {
     'disabled': boolean;
     'hint': string;
@@ -62,7 +64,9 @@ declare namespace LocalJSX {
     'disabled'?: boolean;
     'outline'?: boolean;
   }
-  interface DwcCard extends JSXBase.HTMLAttributes<HTMLDwcCardElement> {}
+  interface DwcCard extends JSXBase.HTMLAttributes<HTMLDwcCardElement> {
+    'title'?: string;
+  }
   interface DwcInput extends JSXBase.HTMLAttributes<HTMLDwcInputElement> {
     'disabled'?: boolean;
     'hint'?: string;
