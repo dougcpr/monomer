@@ -10,6 +10,7 @@ export class Input {
   @Prop() disabled: boolean;
   @Prop() label: string;
   @Prop() type: string;
+  @Prop() hint: string;
   static detectContent(ev) {
     ev.path[0].value ? ev.path[0].classList.add('content-filled') : ev.path[0].classList.remove('content-filled');
   }
@@ -17,11 +18,13 @@ export class Input {
     return (
       <div class="text-field">
         <input
+          class="input"
           type={this.type}
           onKeyUp={Input.detectContent}
           disabled={this.disabled}
         />
         <label>{this.label}</label>
+        <div class="hint">{this.hint}</div>
       </div>
     )
   }

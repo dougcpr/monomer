@@ -16,6 +16,7 @@ export namespace Components {
   interface DwcCard {}
   interface DwcInput {
     'disabled': boolean;
+    'hint': string;
     'label': string;
     'type': string;
   }
@@ -64,6 +65,7 @@ declare namespace LocalJSX {
   interface DwcCard extends JSXBase.HTMLAttributes<HTMLDwcCardElement> {}
   interface DwcInput extends JSXBase.HTMLAttributes<HTMLDwcInputElement> {
     'disabled'?: boolean;
+    'hint'?: string;
     'label'?: string;
     'type'?: string;
   }
