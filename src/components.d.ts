@@ -10,8 +10,8 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface DwcButton {
+    'block': boolean;
     'disabled': boolean;
-    'outline': boolean;
   }
   interface DwcCard {
     'subject': string;
@@ -61,8 +61,8 @@ declare global {
 
 declare namespace LocalJSX {
   interface DwcButton extends JSXBase.HTMLAttributes<HTMLDwcButtonElement> {
+    'block'?: boolean;
     'disabled'?: boolean;
-    'outline'?: boolean;
   }
   interface DwcCard extends JSXBase.HTMLAttributes<HTMLDwcCardElement> {
     'subject'?: string;

@@ -9,8 +9,8 @@
 
 | Property   | Attribute  | Description | Type      | Default     |
 | ---------- | ---------- | ----------- | --------- | ----------- |
+| `block`    | `block`    |             | `boolean` | `undefined` |
 | `disabled` | `disabled` |             | `boolean` | `undefined` |
-| `outline`  | `outline`  |             | `boolean` | `undefined` |
 
 
 ----------------------------------------------

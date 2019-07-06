@@ -11,12 +11,12 @@ import { Component, h, Prop } from '@stencil/core';
 export class Button {
   // Props
   @Prop() disabled: boolean;
-  @Prop() outline: boolean;
+  @Prop() block: boolean;
   // Render HTML
   render() {
     return (
       <button
-        class={{'outline': this.outline}}
+        class={{'block': this.block}}
         disabled={this.disabled}
       >
         <slot/>

@@ -9,19 +9,15 @@ button {
   display: block;
   max-height: 36px;
   min-width: 100px;
+  max-width: 150px;
   outline: none;
   padding: 10px 16px;
   text-align: center;
   text-transform: capitalize;
   width: 100%;
 }
-button.outline:not(:disabled) {
-  background-color: transparent;
-  color: var(--dwc-default);
-  border: 1px solid var(--dwc-default);
-}
-button.outline:not(:disabled):hover {
-  border: 1px solid var( --dwc-input-border-hover);
+button.block:not(:disabled) {
+  max-width: 100%;
 }
 button:disabled {
   background-color: var(--dwc-button-disabled-bg);
