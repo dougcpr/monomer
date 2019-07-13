@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'dwc-input',
@@ -11,8 +11,10 @@ export class Input {
   @Prop() label: string;
   @Prop() type: string;
   @Prop() hint: string;
-  static detectContent(ev) {
+  @Event() valueChange: EventEmitter;
+  detectContent(ev) {
     ev.path[0].value ? ev.path[0].classList.add('content-filled') : ev.path[0].classList.remove('content-filled');
+    this.valueChange.emit(ev.path[0].value)
   }
   render() {
     return (
@@ -20,7 +22,7 @@ export class Input {
         <input
           class="input"
           type={this.type}
-          onKeyUp={Input.detectContent}
+          onInput={(ev) => {this.detectContent(ev)}}
           disabled={this.disabled}
         />
         <label>{this.label}</label>
