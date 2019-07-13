@@ -71,7 +71,7 @@ declare namespace LocalJSX {
     'disabled'?: boolean;
     'hint'?: string;
     'label'?: string;
-    'onValueChange'?: (event: CustomEvent<any>) => void;
+    'onValueChange'?: (event: CustomEvent<string>) => void;
     'type'?: string;
   }
   interface DwcLoader extends JSXBase.HTMLAttributes<HTMLDwcLoaderElement> {}

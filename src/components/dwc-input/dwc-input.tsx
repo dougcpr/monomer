@@ -11,10 +11,10 @@ export class Input {
   @Prop() label: string;
   @Prop() type: string;
   @Prop() hint: string;
-  @Event() valueChange: EventEmitter;
+  @Event() valueChange: EventEmitter<string>;
   detectContent(ev) {
-    ev.path[0].value ? ev.path[0].classList.add('content-filled') : ev.path[0].classList.remove('content-filled');
-    this.valueChange.emit(ev.path[0].value)
+    ev.target.value ? ev.path[0].classList.add('content-filled') : ev.path[0].classList.remove('content-filled');
+    this.valueChange.emit(ev.target.value)
   }
   render() {
     return (
