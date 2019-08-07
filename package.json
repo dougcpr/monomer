@@ -1,7 +1,7 @@
 {
   "name": "monomer",
-  "version": "0.2.9",
-  "description": "Stencil Component Starter",
+  "version": "0.3.0",
+  "description": "initial pass at stencil components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",

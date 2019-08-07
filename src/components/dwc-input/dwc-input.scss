@@ -1,9 +1,7 @@
 .text-field {
   background-color: white;
   height: 57px;
-  max-width: 200px;
-  min-width: 100px;
-  padding: 5px;
+  width: 100%;
   .hint {
     bottom: 15px;
     color: var(--dwc-red);
@@ -15,10 +13,11 @@
 input {
   border: 1px solid var(--dwc-default);
   border-radius: 8px;
+  box-sizing: border-box;
   font-size: 1rem;
   outline: none;
   padding: 12px 16px 14px;
-
+  width: 100%;
 }
 
 input:disabled {
@@ -37,9 +36,9 @@ input::placeholder, label {
 
 label {
   background-color: inherit;
-  bottom: 34px;
+  bottom: 32px;
   color: var(--dwc-default);
-  left: 18px;
+  left: 20px;
   letter-spacing: 0.009375em;
   pointer-events: none;
   position: relative;
@@ -59,10 +58,10 @@ input:hover:not(:focus):not(:disabled) {
 
 input:focus:not(:disabled):empty + label {
   background-color: inherit;
-  bottom: 57px;
+  bottom: 56px;
   color: var(--dwc-green);
   font-size: 11px;
-  left: 10px;
+  left: 7px;
   margin: 5px;
   transition: 0.2s;
   padding: 0 5px;
@@ -71,10 +70,10 @@ input:focus:not(:disabled):empty + label {
 
 .content-filled + label {
   background-color: inherit;
-  bottom: 57px;
+  bottom: 56px;
+  left: 7px;
   color: var(--dwc-default);
   font-size: 11px;
-  left: 10px;
   margin: 5px;
   padding: 0 5px;
   position: relative;
