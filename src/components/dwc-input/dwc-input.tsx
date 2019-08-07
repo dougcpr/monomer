@@ -13,7 +13,7 @@ export class Input {
   @Prop() hint: string;
   @Event() valueChange: EventEmitter<string>;
   detectContent(ev) {
-    ev.target.value ? ev.path[0].classList.add('content-filled') : ev.path[0].classList.remove('content-filled');
+    ev.target.value ? ev.target.classList.add('content-filled') : ev.target.classList.remove('content-filled');
     this.valueChange.emit(ev.target.value)
   }
   render() {
