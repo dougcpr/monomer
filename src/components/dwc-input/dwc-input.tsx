@@ -11,10 +11,14 @@ export class Input {
   @Prop() label: string;
   @Prop() type: string;
   @Prop() hint: string;
+  @Prop() value: string;
   @Event() valueChange: EventEmitter<string>;
-  detectContent(ev) {
+  // propagate value change from view to model
+  inputChanged(ev: any) {
+    let val = ev.target && ev.target.value;
     ev.target.value ? ev.target.classList.add('content-filled') : ev.target.classList.remove('content-filled');
-    this.valueChange.emit(ev.target.value)
+    this.value = val;
+    this.valueChange.emit(this.value);
   }
   render() {
     return (
@@ -22,7 +26,8 @@ export class Input {
         <input
           class="input"
           type={this.type}
-          onInput={(ev) => {this.detectContent(ev)}}
+          value={this.value}
+          onInput={this.inputChanged.bind(this)}
           disabled={this.disabled}
         />
         <label>{this.label}</label>

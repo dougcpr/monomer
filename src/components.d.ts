@@ -21,6 +21,7 @@ export namespace Components {
     'hint': string;
     'label': string;
     'type': string;
+    'value': string;
   }
   interface DwcLoader {}
 }
@@ -73,6 +74,7 @@ declare namespace LocalJSX {
     'label'?: string;
     'onValueChange'?: (event: CustomEvent<string>) => void;
     'type'?: string;
+    'value'?: string;
   }
   interface DwcLoader extends JSXBase.HTMLAttributes<HTMLDwcLoaderElement> {}
 

@@ -13,6 +13,7 @@
 | `hint`     | `hint`     |             | `string`  | `undefined` |
 | `label`    | `label`    |             | `string`  | `undefined` |
 | `type`     | `type`     |             | `string`  | `undefined` |
+| `value`    | `value`    |             | `string`  | `undefined` |
 
 
 ## Events
