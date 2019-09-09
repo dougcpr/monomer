@@ -29,4 +29,11 @@ div.card {
     max-width: 100%;
     padding: 50px;
   }
+
+  @media (max-width: 812px) {
+    div.card {
+      height: 70vh;
+      box-shadow: none;
+    }
+  }
 }
