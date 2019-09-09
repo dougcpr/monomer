@@ -1,6 +1,6 @@
 {
   "name": "monomer",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "initial pass at stencil components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
