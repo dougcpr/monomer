@@ -1,0 +1,20 @@
+.Dropdown__Container {
+  background-color: white;
+  border: 1px solid var(--dwc-default);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  cursor: pointer;
+  height: 57px;
+  padding: 12px 16px 14px;
+  width: 100%;
+  outline: none;
+}
+
+.Dropdown__Container .block:not(:disabled) {
+  max-width: 100%;
+}
+
+.arrow:before {
+  content: '\02C4'
+}
