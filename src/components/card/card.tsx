@@ -2,7 +2,7 @@ import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'dwc-card',
-  styleUrl: 'dwc-card.scss',
+  styleUrl: 'card.scss',
   shadow: true
 })
 

@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/build/monomer.css">
-  <title>Monomer</title>
+  <title>Stencil Component Starter</title>
 
-  <script type="module" src="/build/monomer.esm.js"></script>
-  <script nomodule src="/build/monomer.js"></script>
+  <script type="module" src="/build/dwc.esm.js"></script>
+  <script nomodule src="/build/dwc.js"></script>
+  <link href="/build/dwc.css" rel="stylesheet">
+
 </head>
 <body>
 <div>
@@ -41,15 +42,3 @@
 
 </body>
 </html>
-<script>
-  // example function to render loader after clicking submit button
-  function submitted(ev) {
-    let text = ev.target.innerHTML;
-    console.log(document.getElementById("username".value));
-    console.log(document.getElementById("password".value));
-    ev.target.innerHTML = `<dwc-loader></dwc-loader>`;
-    setTimeout(() => {
-      ev.target.innerHTML = text;
-    }, 2000);
-  }
-</script>

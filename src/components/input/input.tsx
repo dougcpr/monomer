@@ -2,7 +2,7 @@ import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'dwc-input',
-  styleUrl: 'dwc-input.scss',
+  styleUrl: 'input.scss',
   shadow: true
 })
 
@@ -12,13 +12,13 @@ export class Input {
   @Prop() type: string;
   @Prop() hint: string;
   @Prop() value: string;
-  @Event() valueChange: EventEmitter<string>;
+  @Event() valueChanged: EventEmitter<string>;
   // propagate value change from view to model
   inputChanged(ev: any) {
     let val = ev.target && ev.target.value;
     ev.target.value ? ev.target.classList.add('content-filled') : ev.target.classList.remove('content-filled');
     this.value = val;
-    this.valueChange.emit(this.value);
+    this.valueChanged.emit(this.value);
   }
   render() {
     return (
