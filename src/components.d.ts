@@ -24,7 +24,6 @@ export namespace Components {
     'type': string;
     'value': string;
   }
-  interface DwcLoader {}
 }
 
 declare global {
@@ -47,17 +46,10 @@ declare global {
     prototype: HTMLDwcInputElement;
     new (): HTMLDwcInputElement;
   };
-
-  interface HTMLDwcLoaderElement extends Components.DwcLoader, HTMLStencilElement {}
-  var HTMLDwcLoaderElement: {
-    prototype: HTMLDwcLoaderElement;
-    new (): HTMLDwcLoaderElement;
-  };
   interface HTMLElementTagNameMap {
     'dwc-button': HTMLDwcButtonElement;
     'dwc-card': HTMLDwcCardElement;
     'dwc-input': HTMLDwcInputElement;
-    'dwc-loader': HTMLDwcLoaderElement;
   }
 }
 
@@ -77,13 +69,11 @@ declare namespace LocalJSX {
     'type'?: string;
     'value'?: string;
   }
-  interface DwcLoader {}
 
   interface IntrinsicElements {
     'dwc-button': DwcButton;
     'dwc-card': DwcCard;
     'dwc-input': DwcInput;
-    'dwc-loader': DwcLoader;
   }
 }
 
@@ -96,7 +86,6 @@ declare module "@stencil/core" {
       'dwc-button': LocalJSX.DwcButton & JSXBase.HTMLAttributes<HTMLDwcButtonElement>;
       'dwc-card': LocalJSX.DwcCard & JSXBase.HTMLAttributes<HTMLDwcCardElement>;
       'dwc-input': LocalJSX.DwcInput & JSXBase.HTMLAttributes<HTMLDwcInputElement>;
-      'dwc-loader': LocalJSX.DwcLoader & JSXBase.HTMLAttributes<HTMLDwcLoaderElement>;
     }
   }
 }
